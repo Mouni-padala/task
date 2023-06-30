@@ -1,0 +1,108 @@
+.title{
+  font-size: 25px;
+  color:blueviolet;
+  position: absolute;
+left: 120px;
+bottom: 370px;
+}
+.title2{
+  font-size: 25px;
+  color:blueviolet;
+  position: absolute;
+left: 120px;
+bottom: 240px;
+}
+
+.sign-page{
+  margin-top: 100px;
+  position: absolute;
+  right: 440px;
+  bottom: 150px;
+  width: 200px;
+  border: 3px solid gray;
+
+  padding: 50px;
+  background-color: aliceblue;
+  
+  }
+  .field{
+    font-size: larger;
+  }
+  .input{
+    height: 20px;
+    width: 200px;
+  }
+  .submit{
+    margin-left:60px;
+    background-color: green;
+    color: whitesmoke;
+  }
+  .reset-page{
+    background-color: aliceblue;
+    border: 3px solid gray;
+    margin: 50px;
+    padding: 50px;
+    width: 200px;
+    height: 100px;
+  }
+  .reset{
+    background-color: orange;
+  }
+  .field-page{
+    font-size: larger;
+    margin-right: 45px;
+  }
+  .image-page{
+    background-color: aliceblue;
+    padding: 20px;
+    border: 2px solid gray;
+    width: 200px;
+    height: 100px;
+  }
+  .submit-page{
+    background-color: green;
+    color: white;
+  }
+  table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-shadow:2px 2px 5px violet;
+  }
+  .head{
+    text-shadow: 2px 2px 5px red;
+  }
+  .search-box{
+    height: 30px;
+    width:300px;
+    margin: auto;
+    outline-color: black;
+  }
+  .submit-page1{
+    height: 30px;
+    width: 80px;
+    background-color: green;
+    color: white;
+  }
+  .table-tag{
+    background-color: lightgray;
+    color: blue;
+  }
+  .delete-tag{
+    background-color: red;
+    color: white;
+  }
+  .navbar{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    height: 35px;
+    background-color:black;
+    color:white;
+  }
+  .link-tag{
+    color: black;
+    border: 1px solid lightgrey;
+    background-color: lightgray;
+    text-decoration: none;
+  }
