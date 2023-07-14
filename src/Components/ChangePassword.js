@@ -17,9 +17,9 @@ const ChangePassword=()=>{
     return(
         <div>
             <center>
-        <div className="reset-page">
-        <span className="field-page">Change Password:</span>
-            <input type="password" className="input" name="Password" onChange={passwordHandler} placeholder="Reset your password..."/><br/><br/>
+        <div className="reset-password-page">
+        <span className="field-password-page">Change Password:</span>
+            <input type="password" className="input-tag" name="Password" onChange={passwordHandler} placeholder="Reset your password..."/><br/><br/>
             <button className="reset" onClick={changeHandler} >Reset Password</button>
         </div>
         </center>

@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom'
-const AddProduct = () => {
+import Gdata from "./Gdata";
+const UpdateProduct = () => {
+    const gdata = useContext(Gdata);
+    console.log(process.env.REACT_APP_UPDATE_PRODUCT_API);
  const navigate=useNavigate();
+ console.log(gdata.updateProductData)
+ console.log(gdata.updateProductData._id)
   const [Data, setData] = useState({
-    product_name: "",
-    product_price: "",
-    product_rating: "",
-    product_disp: "",
+    product_name: gdata.updateProductData.product_name,
+    product_price: gdata.updateProductData.product_price,
+    product_rating:gdata.updateProductData.product_rating,
+    product_disp: gdata.updateProductData.product_disp,
   });
   const changeHandler = (e) => {
     setData({ ...Data, [e.target.name]: e.target.value });
@@ -30,14 +35,16 @@ const AddProduct = () => {
     } else {
       try {
         console.log(Data);
-        const response = await axios.post(
-        process.env.REACT_APP_ADD_PRODUCT_API,
+        if(gdata.isadmin){
+        const response = await axios.put(
+    `${process.env.REACT_APP_UPDATE_PRODUCT_API}/${gdata.updateProductData._id}`,
           Data,
           config
         );
         console.log(response.data);
-        alert("Data Posted Successfully!")
-        navigate('/search')
+        alert("Updated successfully!")
+        navigate('/search')}
+        
       } catch (error) {
         console.error(error);
       }
@@ -89,9 +96,9 @@ const AddProduct = () => {
       />
       <br /><br/>
       <button className="Add-submit" onClick={submitHandler}>
-        submit
+        update
       </button>
     </div>
   );
 };
-export default AddProduct;
+export default UpdateProduct;
